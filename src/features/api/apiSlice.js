@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query"
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 
 export const apiSlice = createApi({
@@ -8,7 +8,9 @@ export const apiSlice = createApi({
     }),
     endpoints: (builder) => ({
         getVideos: builder.query({
-
+            query: () => "/videos"
         })
     })
 })
+
+export const { useGetVideosQuery } = apiSlice;
