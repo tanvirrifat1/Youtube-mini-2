@@ -42,12 +42,14 @@ export default function Video() {
                         {content}
                     </div>
 
-                    {video?.id ? <RelatedVideos /> : isLoading ?
-                        <>
-                            <RelatedVideoLoader />
-                            <RelatedVideoLoader />
-                            <RelatedVideoLoader />
-                        </> : <Error message="There was an error" />}
+                    {video?.id ?
+                        <RelatedVideos id={video.id} title={video.title} />
+                        : isLoading ?
+                            <>
+                                <RelatedVideoLoader />
+                                <RelatedVideoLoader />
+                                <RelatedVideoLoader />
+                            </> : <Error message="There was an error" />}
                 </div>
             </div>
         </section>
