@@ -14,6 +14,7 @@ export default function RelatedVideos({ id, title }) {
                 <RelatedVideoLoader />
                 <RelatedVideoLoader />
                 <RelatedVideoLoader />
+                <RelatedVideoLoader />
             </>
     }
 
